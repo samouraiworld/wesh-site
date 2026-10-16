@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark light">
+<title>Security — Wesh</title>
+<meta name="description" content="Report a vulnerability in Wesh.">
+<link rel="canonical" href="https://wesh.samourai.app/en/security">
+<link rel="alternate" hreflang="fr" href="https://wesh.samourai.app/securite">
+<link rel="alternate" hreflang="en" href="https://wesh.samourai.app/en/security">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html" aria-label="Wesh, home">Wesh</a>
+<nav aria-label="Main navigation"><ul><li><a href="index.html#how">How it works</a></li><li><a href="support.html">Support</a></li><li><a href="donate.html">Donate</a></li><li><a href="../securite.html" hreflang="fr" lang="fr">Français</a></li></ul></nav>
+</div>
+</header>
+<main id="contenu" class="wrap" tabindex="-1">
+<h1>Report a vulnerability</h1>
+<p class="lead">Found a flaw in Wesh? Write to us privately before publishing anything. Wesh is used when networks are down: a flaw can then hurt the people who depend on it.</p>
+
+<h2>Contact</h2>
+<dl class="facts">
+<dt>Address</dt>
+<dd>security@samourai.coop</dd>
+</dl>
+<p>The <a href="../.well-known/security.txt">security.txt</a> file carries the same information.</p>
+
+<h2>What to send us</h2>
+<ul>
+<li>Platform and versions: app, operating system, phone model.</li>
+<li>Steps to reproduce the issue, and its impact.</li>
+<li>A proof of concept, if you have one.</li>
+<li>No data belonging to other people.</li>
+</ul>
+
+<h2>What we ask of you</h2>
+<ul>
+<li>Test on your own devices, or with the explicit consent of the people involved.</li>
+<li>Do not disrupt real use of Wesh and do not read other people's messages.</li>
+<li>Give us time to fix the issue before publishing.</li>
+</ul>
+
+<h2>What we commit to</h2>
+<ul>
+<li>Acknowledge your report and keep you informed of the fix.</li>
+<li>Agree on a publication date with you.</li>
+<li>Thank you publicly, if you wish.</li>
+</ul>
+
+<h2>Scope</h2>
+<h3>In scope</h3>
+<ul>
+<li>The Wesh app for iOS (<a href="https://github.com/samouraiworld/wesh-bitchat-ios">wesh-bitchat-ios</a>) and Android (<a href="https://github.com/samouraiworld/wesh-bitchat-android">wesh-bitchat-android</a>), released versions and main branch.</li>
+<li>The protocol as implemented by Wesh: Bluetooth mesh, private message encryption, QR code verification, Internet mode over Tor.</li>
+<li>Encrypted storage on the phone and emergency erase.</li>
+<li>APK files distributed on this site.</li>
+<li>This website.</li>
+</ul>
+<h3>Out of scope</h3>
+<ul>
+<li>The BitChat app and its repositories: report to the BitChat project, and tell us if Wesh is affected too.</li>
+<li>Third-party Nostr relays and the Tor network: report to their operators or to the Tor Project.</li>
+<li>Flaws in iOS and Android or their Bluetooth stacks.</li>
+<li>Radio jamming and denial of service by flooding Bluetooth.</li>
+<li>Documented limits: the local room is public, the phone is detectable over Bluetooth, public keys stay stable until reset, relays see metadata. Ideas to reduce them are welcome.</li>
+</ul>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p>Wesh is free and open-source software, published on a non-profit basis by Samouraï Coop, 149 avenue du Maine, 75014 Paris, France.</p>
+<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html" aria-current="page">Security</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li></ul></nav>
+<p class="muted">This site sets no cookies, uses no trackers and loads no external resources. © 2026 Samouraï Coop.</p>
+</div>
+</footer>
+</body>
+</html>
