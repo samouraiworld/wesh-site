@@ -17,6 +17,7 @@ The visual style follows the Wesh "Pavé" design system: asphalt (night) and cha
 | Transparency | `transparence.html` → `/transparence` | `en/transparency.html` → `/en/transparency` |
 | Donations | `dons.html` → `/dons` | `en/donate.html` → `/en/donate` |
 | Security | `securite.html` → `/securite` | `en/security.html` → `/en/security` |
+| Legal notice | `mentions-legales.html` → `/mentions-legales` | `en/legal.html` → `/en/legal` |
 
 Other files:
 
