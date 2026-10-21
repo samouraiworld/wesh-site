@@ -50,14 +50,17 @@
 <h3>What is "Requests"?</h3>
 <p>Private messages from people you have not verified arrive there, with no notification. Do not trust a nickname: only in-person QR verification counts.</p>
 
+<!-- INTERNET:START -->
 <h3>What is Internet mode for?</h3>
-<p>It is off by default. Turned on in <strong>Settings</strong>, it lets you write to verified contacts out of Bluetooth range. Messages travel encrypted over the Tor network, then through public relays, which cannot read them but can see that a message is addressed to a given key, and when. The local room stays Bluetooth only.</p>
+<p>It is off by default. Turned on in <strong>Connection</strong>, it lets you write to verified contacts out of Bluetooth range, if their QR code carries an Internet key. Messages travel encrypted over the Tor network, then through three public Nostr relays: relay.damus.io, relay.primal.net and offchain.pub. These relays cannot read the messages. They see which key a message is addressed to, when, and its size. The local room stays Bluetooth only.</p>
+<!-- INTERNET:END -->
 
 <h3>How do I block or report someone?</h3>
-<p>Tap a message or a nickname, then <strong>Block</strong>: you will receive nothing more from that person. <strong>Report</strong> hides the content on your phone and lets you send it to us. Wesh has no server: we cannot delete a message on other phones.</p>
+<p>Tap a message or a nickname, then <strong>Block</strong>: you will receive nothing more from that person. <strong>Report</strong> blocks the person and prepares an email to support@samourai.coop in your mail app. You review it and choose whether to send it. Wesh has no server: we cannot delete a message on other phones.</p>
 
 <h3>How do I erase everything in an emergency?</h3>
-<p>In <strong>Settings</strong>, <strong>Erase all data</strong> deletes, after confirmation, your keys, contacts, conversations and drafts. You get a new identity; your contacts will need to verify you again. Messages already received by other phones are not recalled.</p>
+<p>In <strong>Settings</strong>, hold <strong>Erase everything</strong> for three seconds. The <strong>Erase everything</strong> shortcut (app icon on Android, Spotlight or Shortcuts on iPhone) opens the same control. It never erases by itself.</p>
+<p>Wesh deletes from this phone your keys, nickname, contacts, conversations, drafts, meeting note and settings. It then returns to the welcome screen with a new identity. Your contacts will need to verify you again. On iPhone, if the erase is not confirmed, Wesh tells you and keeps Bluetooth off until an erase is confirmed. Messages already received by other phones are not recalled. Details: <a href="privacy.html">privacy</a>, §8.</p>
 
 <h3>Why don't my messages arrive?</h3>
 <p>You need at least one phone in range, or Internet mode for a verified contact. Keep Bluetooth on and the app open: phones limit background activity.</p>

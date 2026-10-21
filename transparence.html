@@ -24,7 +24,7 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Transparence</h1>
-<p class="lead"><strong>Nous n'avons aucune donnée à remettre.</strong> Wesh n'a ni compte ni serveur de l'éditeur. Ce qui n'est pas collecté ne peut être ni divulgué, ni perdu, ni saisi.</p>
+<p class="lead"><strong>Nous n'avons aucune donnée de l'application à remettre.</strong> Wesh n'a ni compte ni serveur de l'éditeur. Ce qui n'est pas collecté ne peut être ni divulgué, ni perdu, ni saisi.</p>
 
 <h2>Ce que Samouraï Coop ne détient pas</h2>
 <ul>
@@ -40,20 +40,22 @@
 <li>Lire un message privé : il est chiffré de bout en bout entre vous et votre contact vérifié.</li>
 <li>Supprimer un message sur les autres téléphones.</li>
 <li>Exclure une personne du réseau.</li>
-<li>Retrouver vos données après <strong>Effacer toutes les données</strong>.</li>
+<li>Retrouver vos données après <strong>Tout effacer</strong>. Cet effacement ne supprime pas les copies gardées par d'autres personnes<!-- INTERNET:START -->, par les relais Nostr<!-- INTERNET:END --> ou dans des sauvegardes déjà faites.</li>
 </ul>
 
 <h2>Ce que nous pouvons détenir</h2>
 <ul>
-<li>Les e-mails que vous nous envoyez (support, signalement, sécurité) et ce que vous choisissez d'y joindre. Ils sont conservés le temps de traiter votre demande, puis supprimés.</li>
+<li>Les e-mails que vous nous envoyez (support, signalement, sécurité) et ce que vous choisissez d'y joindre. Un signalement peut contenir le surnom, l'empreinte courte et un message public de la personne signalée. Ces e-mails sont conservés le temps de traiter votre demande, puis supprimés.</li>
 <li>Le code source et les versions publiées de l'application, qui sont publics.</li>
 </ul>
 
 <h2>Ce que d'autres peuvent voir</h2>
 <ul>
-<li><strong>Les personnes à portée :</strong> votre surnom, un identifiant temporaire, vos clés publiques et tout ce que vous écrivez dans le salon local.</li>
-<li><strong>Les relais Nostr</strong> (mode Internet seulement) : une enveloppe chiffrée, la clé publique du destinataire, une date et une taille. Ils sont exploités par des tiers indépendants et conservent ces données selon leurs propres règles.</li>
+<li><strong>Les personnes à portée :</strong> votre surnom, votre identifiant de pair et vos clés publiques, stables jusqu'à l'effacement d'urgence, et tout ce que vous écrivez dans le salon local.</li>
+<!-- INTERNET:START -->
+<li><strong>Les relais Nostr</strong> (mode Internet seulement) : une enveloppe chiffrée, la clé Internet du destinataire, l'heure et la taille. Ils peuvent relier vos envois à votre clé. Wesh utilise trois relais publics exploités par des tiers : relay.damus.io, relay.primal.net et offchain.pub. Ils conservent ces données selon leurs propres règles.</li>
 <li><strong>Le relais Tor d'entrée</strong> (mode Internet seulement) : votre adresse IP, mais pas les relais contactés ni le contenu.</li>
+<!-- INTERNET:END -->
 <li><strong>Apple et Google</strong> traitent les données de téléchargement selon leurs propres règles. Nous ne recevons pas la liste des personnes qui installent Wesh.</li>
 <li><strong>GitHub</strong> héberge ce site et peut journaliser l'adresse IP des visiteurs pour la sécurité de son service. Nous n'avons pas accès à ces journaux. Ce site ne dépose aucun cookie et ne charge aucune ressource externe.</li>
 </ul>

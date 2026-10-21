@@ -50,14 +50,17 @@
 <h3>Qu'est-ce que « Demandes » ?</h3>
 <p>Les messages privés de personnes que vous n'avez pas vérifiées y arrivent, sans notification. Ne faites pas confiance à un surnom : seule la vérification QR en personne compte.</p>
 
+<!-- INTERNET:START -->
 <h3>À quoi sert le mode Internet ?</h3>
-<p>Il est désactivé par défaut. Activé dans <strong>Réglages</strong>, il permet d'écrire à vos contacts vérifiés hors de portée Bluetooth. Les messages passent chiffrés par le réseau Tor puis par des relais publics, qui ne peuvent pas les lire mais voient qu'un message est destiné à une clé donnée, et à quelle heure. Le salon local reste uniquement en Bluetooth.</p>
+<p>Il est désactivé par défaut. Activé dans <strong>Connexion</strong>, il permet d'écrire à vos contacts vérifiés hors de portée Bluetooth, si leur QR code contient une clé Internet. Les messages passent chiffrés par le réseau Tor, puis par trois relais Nostr publics : relay.damus.io, relay.primal.net et offchain.pub. Ces relais ne peuvent pas lire les messages. Ils voient à quelle clé un message est destiné, à quelle heure, et sa taille. Le salon local reste uniquement en Bluetooth.</p>
+<!-- INTERNET:END -->
 
 <h3>Comment bloquer ou signaler quelqu'un ?</h3>
-<p>Appuyez sur un message ou un surnom, puis <strong>Bloquer</strong> : vous ne recevrez plus rien de cette personne. <strong>Signaler</strong> masque le contenu sur votre téléphone et permet de nous l'envoyer. Wesh fonctionne sans serveur : nous ne pouvons pas supprimer un message sur les autres téléphones.</p>
+<p>Appuyez sur un message ou un surnom, puis <strong>Bloquer</strong> : vous ne recevrez plus rien de cette personne. <strong>Signaler</strong> bloque la personne et prépare un e-mail vers support@samourai.coop dans votre messagerie. Vous le relisez et choisissez de l'envoyer ou non. Wesh fonctionne sans serveur : nous ne pouvons pas supprimer un message sur les autres téléphones.</p>
 
 <h3>Comment tout effacer en urgence ?</h3>
-<p>Dans <strong>Réglages</strong>, <strong>Effacer toutes les données</strong> supprime, après confirmation, vos clés, contacts, conversations et brouillons. Vous obtenez une nouvelle identité ; vos contacts devront vous revérifier. Les messages déjà reçus par d'autres téléphones ne sont pas rappelés.</p>
+<p>Dans <strong>Réglages</strong>, maintenez <strong>Tout effacer</strong> trois secondes. Le raccourci <strong>Tout effacer</strong> (icône de l'app sur Android, Spotlight ou Raccourcis sur iPhone) ouvre la même commande. Il n'efface rien par lui-même.</p>
+<p>Wesh supprime de ce téléphone vos clés, surnom, contacts, conversations, brouillons, note de rendez-vous et réglages. Il revient ensuite à l'écran de bienvenue avec une nouvelle identité. Vos contacts devront vous revérifier. Sur iPhone, si l'effacement n'est pas confirmé, Wesh vous le dit et garde le Bluetooth coupé jusqu'à un effacement confirmé. Les messages déjà reçus par d'autres téléphones ne sont pas rappelés. Détails : <a href="confidentialite.html">confidentialité</a>, §8.</p>
 
 <h3>Mes messages n'arrivent pas, pourquoi ?</h3>
 <p>Il faut au moins un téléphone à portée, ou le mode Internet pour un contact vérifié. Gardez le Bluetooth activé et l'application ouverte : les systèmes limitent l'activité en arrière-plan.</p>

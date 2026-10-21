@@ -38,9 +38,11 @@
 <ul class="modes">
 <li><span class="tag tag-public">Public</span><div><h3>Local room</h3><p>Write to everyone in range who uses Wesh or BitChat. The more phones there are, the further it reaches.</p></div></li>
 <li><span class="tag tag-private">Private</span><div><h3>Verified contacts</h3><p>Swap QR codes in person. Your private messages are then end-to-end encrypted.</p></div></li>
-<li><span class="tag tag-internet">Via Internet</span><div><h3>If you turn it on</h3><p>Off by default. Reaches verified contacts out of range, through Tor and public relays, while the Internet still works.</p></div></li>
+<!-- INTERNET:START -->
+<li><span class="tag tag-internet">Via Internet</span><div><h3>If you turn it on</h3><p>Off by default. Reaches verified contacts out of range, through Tor and three public relays, while the Internet still works.</p></div></li>
+<!-- INTERNET:END -->
 </ul>
-<p>No phone number, no email. Your keys are created on your phone and your data stays there, encrypted. <strong>Erase all data</strong>, in settings, deletes everything after confirmation.</p>
+<p>No phone number, no email. Your keys are created on your phone and never leave it. Your data stays on the phone. In an emergency, hold <strong>Erase everything</strong> for three seconds, in <strong>Settings</strong>.</p>
 
 <h2 id="limits">Good to know</h2>
 <div class="band-public">
@@ -48,8 +50,8 @@
 </div>
 <ul class="limits">
 <li><strong>It needs phones nearby.</strong> A few dozen metres, more through relays. Alone, without Internet mode, your messages wait.</li>
-<li><strong>Your phone is detectable.</strong> It broadcasts your nickname and public keys to nearby devices. These keys stay the same until you reset your identity.</li>
-<li><strong>No promise of anonymity.</strong> A nickname does not prove who someone is. In Internet mode, the Tor entry relay sees your IP address.</li>
+<li><strong>Your phone is detectable.</strong> It broadcasts your nickname, your identifier and your public keys to nearby devices. They stay the same until you use the emergency erase.</li>
+<li><strong>No promise of anonymity.</strong> A nickname does not prove who someone is.<!-- INTERNET:START --> In Internet mode, the Tor entry relay sees your IP address.<!-- INTERNET:END --></li>
 </ul>
 
 <h2 id="download">Download</h2>
