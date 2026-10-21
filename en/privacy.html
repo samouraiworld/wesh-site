@@ -129,7 +129,8 @@
 <li>It is used only for private messages to verified contacts whose QR code carries an Internet key.</li>
 <li>Messages go through the <strong>Tor</strong> network, then through three public <strong>Nostr</strong> relays that Wesh does not run: relay.damus.io, relay.primal.net and relay.snort.social. Wesh uses no other relay.</li>
 <li>Relays see neither your IP address nor the content. They see the recipient's Internet key, the time and size of messages, and can link your sends to your key.</li>
-<li>Anyone who has your QR code knows your Internet key.</li>
+<li>Your QR code always carries your Internet key, even while Internet mode is off. The key is created on the phone at the end of the welcome and is not used on the network until you turn the mode on. Anyone who has your QR code knows it.</li>
+<li>A verified contact who has Internet mode on may send you messages through the relays even if you never turn it on: the relays then see your Internet key and the time and size of those messages. You receive them only once you turn the mode on, within 24 hours.</li>
 <li>The Tor entry relay sees your IP address, but not which relays you reach or what you send.</li>
 <li>Relays may keep the encrypted messages under their own rules. <strong>These copies cannot be deleted</strong>, not by you, not by Samouraï Coop, not by the emergency erase.</li>
 <li>Samouraï Coop neither controls nor receives this data.</li>
