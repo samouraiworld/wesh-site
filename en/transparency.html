@@ -53,7 +53,7 @@
 <ul>
 <li><strong>People in range:</strong> your nickname, your peer ID and your public keys, which stay the same until the emergency erase, and everything you write in the local room.</li>
 <!-- INTERNET:START -->
-<li><strong>Nostr relays</strong> (Internet mode only): an encrypted envelope, the recipient's Internet key, the time and the size. They can link your sends to your key. Wesh uses three public relays run by third parties: relay.damus.io, relay.primal.net and relay.snort.social. They keep this data under their own rules.</li>
+<li><strong>Nostr relays</strong> (Internet mode only): an encrypted envelope, the recipient's Internet key, time, size and transport metadata. The outer envelope carries a one-time ephemeral sender key, not the sender's durable protocol identity. Traffic correlation by a third party remains possible. Wesh uses three public relays run by third parties: relay.damus.io, relay.primal.net and relay.snort.social. They keep this data under their own rules.</li>
 <li><strong>The Tor entry relay</strong> (Internet mode only): your IP address, but not which relays you reach or what you send.</li>
 <!-- INTERNET:END -->
 <li><strong>Apple and Google</strong> process download data under their own rules. We do not receive the list of people who install Wesh.</li>
