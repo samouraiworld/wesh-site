@@ -38,9 +38,11 @@
 <ul class="modes">
 <li><span class="tag tag-public">Public</span><div><h3>Salon local</h3><p>Écrivez à tous ceux qui sont à portée, utilisateurs de Wesh ou de BitChat. Plus il y a de téléphones, plus la portée s'étend.</p></div></li>
 <li><span class="tag tag-private">Privé</span><div><h3>Contacts vérifiés</h3><p>Échangez vos QR codes en personne. Vos messages privés sont ensuite chiffrés de bout en bout.</p></div></li>
-<li><span class="tag tag-internet">Via Internet</span><div><h3>Si vous l'activez</h3><p>Désactivé par défaut. Joint vos contacts vérifiés hors de portée, par Tor et des relais publics, quand Internet fonctionne encore.</p></div></li>
+<!-- INTERNET:START -->
+<li><span class="tag tag-internet">Via Internet</span><div><h3>Si vous l'activez</h3><p>Désactivé par défaut. Joint vos contacts vérifiés hors de portée, par Tor et trois relais publics, quand Internet fonctionne encore.</p></div></li>
+<!-- INTERNET:END -->
 </ul>
-<p>Pas de numéro de téléphone, pas d'e-mail. Vos clés sont créées sur votre téléphone et vos données y restent, chiffrées. <strong>Effacer toutes les données</strong>, dans les réglages, supprime tout après confirmation.</p>
+<p>Pas de numéro de téléphone, pas d'e-mail. Vos clés sont créées sur votre téléphone. Wesh exclut ses données des sauvegardes Google ; sur iPhone, ses fichiers sensibles sont exclus des sauvegardes iCloud, et la restauration reste à vérifier (voir <a href="confidentialite.html">Confidentialité</a>, §4). En urgence, maintenez <strong>Tout effacer</strong> trois secondes, dans <strong>Réglages</strong>.</p>
 
 <h2 id="limites">À savoir</h2>
 <div class="band-public">
@@ -48,12 +50,15 @@
 </div>
 <ul class="limits">
 <li><strong>Il faut des téléphones à portée.</strong> Quelques dizaines de mètres, davantage par relais. Seul, sans mode Internet, vos messages attendent.</li>
-<li><strong>Votre téléphone est détectable.</strong> Il diffuse votre surnom et vos clés publiques aux appareils proches. Ces clés restent les mêmes tant que vous ne réinitialisez pas votre identité.</li>
-<li><strong>Aucune promesse d'anonymat.</strong> Un surnom ne prouve pas une identité. En mode Internet, le relais Tor d'entrée voit votre adresse IP.</li>
+<li><strong>Votre téléphone est détectable.</strong> Il diffuse votre surnom, votre identifiant et vos clés publiques aux appareils proches. Ils restent les mêmes jusqu'à l'effacement d'urgence.</li>
+<li><strong>Aucune promesse d'anonymat.</strong> Un surnom ne prouve pas une identité.<!-- INTERNET:START --> En mode Internet, le relais Tor d'entrée voit votre adresse IP.<!-- INTERNET:END --></li>
 </ul>
 
 <h2 id="telecharger">Télécharger</h2>
 <p>Wesh n'est pas encore disponible. Les liens App Store, Google Play et APK seront publiés ici.</p>
+<ul>
+<li>APK Android signé, sur GitHub Releases : bientôt.</li>
+</ul>
 <p class="muted">iPhone sous iOS 16 ou ultérieur, Android 8.0 ou ultérieur. Réservé aux personnes de 16 ans et plus.</p>
 
 <h2 id="commun">Un commun</h2>
@@ -66,7 +71,7 @@
 <footer class="site-footer">
 <div class="wrap">
 <p>Wesh est un logiciel libre et open source édité sans but lucratif par <a href="https://samourai.world">Samouraï Coop</a>, société coopérative française et studio d'ingénierie open source.</p>
-<nav aria-label="Pied de page"><ul><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="support.html">Support</a></li><li><a href="transparence.html">Transparence</a></li><li><a href="dons.html">Dons</a></li><li><a href="securite.html">Sécurité</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">Code iOS</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Code Android</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
+<nav aria-label="Pied de page"><ul><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="support.html">Support</a></li><li><a href="transparence.html">Transparence</a></li><li><a href="dons.html">Dons</a></li><li><a href="securite.html">Sécurité</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">Code iOS</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Code Android</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">Ce site ne dépose aucun cookie, n'utilise aucun traceur et ne charge aucune ressource externe. © 2026 Samouraï Coop.</p>
 </div>
 </footer>

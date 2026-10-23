@@ -24,78 +24,124 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Politique de confidentialité</h1>
-<p class="meta">Version 1.0 — en vigueur le 16 octobre 2026. <a href="en/privacy.html" hreflang="en" lang="en">English version</a>.</p>
+<p class="meta">Version 1.1 — mise à jour le 21 octobre 2026. <a href="en/privacy.html" hreflang="en" lang="en">English version</a>.</p>
 
 <h2>1. Qui sommes-nous</h2>
-<p>Wesh est une application gratuite et à but non lucratif éditée par <strong>Samouraï Coop</strong>, SARL SCOP, 149 avenue du Maine, 75014 Paris.<br>Contact : support@samourai.coop.</p>
+<p>Wesh est une application gratuite, open source et à but non lucratif éditée par <strong>Samouraï Coop</strong>, SARL SCOP, 149 avenue du Maine, 75014 Paris.<br>Contact : support@samourai.coop. Failles de sécurité : security@samourai.coop.</p>
 
 <h2>2. En résumé</h2>
 <ul>
 <li>Pas de compte, pas de numéro de téléphone, pas d'adresse e-mail demandés.</li>
 <li>Samouraï Coop n'exploite aucun serveur pour Wesh et ne reçoit ni vos messages, ni vos contacts, ni votre position.</li>
-<li>Vos données restent sur votre téléphone, chiffrées.</li>
+<li>Wesh ne lit pas votre position.</li>
 <li>Aucune statistique d'usage, aucun rapport de plantage, aucune publicité, aucun pistage.</li>
+<li>En Bluetooth, les téléphones proches voient votre surnom et un identifiant qui ne change pas jusqu'à l'effacement d'urgence (§5).</li>
+<li>Le salon local est public.</li>
 </ul>
 
 <h2>3. Données conservées sur votre téléphone</h2>
 <ul>
-<li>Surnom, clés d'identité, contacts vérifiés, conversations, brouillons, réglages.</li>
-<li>Elles sont chiffrées, avec des clés conservées dans le Keychain (iOS) ou l'Android Keystore.</li>
-<li>Elles ne sont pas incluses dans les sauvegardes iCloud ou Google.</li>
-<li>Vous les supprimez avec <strong>Réglages → Effacer toutes les données</strong>, ou en désinstallant l'application.</li>
+<li>Surnom, clés d'identité, contacts vérifiés, brouillons, note de rendez-vous, réglages.</li>
+<li>Messages privés : sur Android, l'historique est enregistré chiffré sur le téléphone. Sur iPhone, il reste en mémoire et disparaît quand l'application est fermée.</li>
+<li>Un message privé pas encore remis est gardé chiffré 24 heures au plus.</li>
+<li>Les messages récents du salon local peuvent être gardés quelques heures, pour être relayés aux téléphones qui arrivent.</li>
+<li>Sur iPhone, Wesh peut aussi garder 24 heures au plus un message privé chiffré qu'un contact vérifié lui confie pour un tiers. Vous ne pouvez pas le lire.</li>
+<li>Les clés sont gardées dans le trousseau (iOS) ou protégées par l'Android Keystore. Wesh ne les envoie à personne (sauvegardes : §4).</li>
 </ul>
 
-<h2>4. Ce que voient les personnes à portée (Bluetooth)</h2>
+<h2>4. Sauvegardes</h2>
 <ul>
-<li>Votre téléphone diffuse votre <strong>surnom</strong>, un identifiant temporaire et vos <strong>clés publiques</strong>.</li>
-<li>Ces clés restent les mêmes tant que vous ne réinitialisez pas votre identité. Un appareil à portée peut donc reconnaître votre téléphone d'une rencontre à l'autre.</li>
-<li><strong>Le salon local est public.</strong> Il est visible de tous les utilisateurs Wesh et BitChat à portée, qui peuvent lire, conserver et relayer vos messages.</li>
-<li>Les messages privés sont chiffrés de bout en bout. Seul votre contact vérifié peut les lire. Les téléphones qui les relaient voient seulement qu'un message chiffré passe.</li>
+<li><strong>Android :</strong> Wesh exclut toutes ses données des sauvegardes Google et des transferts vers un nouveau téléphone.</li>
+<li><strong>iPhone :</strong> Wesh configure l'exclusion de ses fichiers sensibles des sauvegardes iCloud et sur ordinateur. Les clés liées à l'appareil ne sont pas migrées vers un autre appareil. Une restauration sur l'appareil d'origine peut conserver des clés et reste à vérifier. Les réglages de l'application peuvent être sauvegardés (apparence, avertissements acceptés<!-- INTERNET:START -->, mode Internet activé ou non<!-- INTERNET:END -->).</li>
+<li>Cette version ne tient plus de décompte des téléphones croisés et ne reçoit plus de texte depuis l'extension de partage retirée. Une sauvegarde faite avec une ancienne version peut cependant encore contenir ce décompte, sa valeur secrète, des heures de rencontre, des réglages d'anciens salons géographiques ou un texte partagé non utilisé. Un identifiant de pair enregistré ailleurs peut permettre de reconnaître un téléphone dans l'ancien décompte.</li>
+<li>La mise à jour et l'effacement d'urgence ne modifient pas les sauvegardes déjà faites. La migration et la restauration du candidat V1 doivent être vérifiées sur appareil avant publication ; aucune garantie générale d'absence de données dans une ancienne sauvegarde n'est acquise.</li>
 </ul>
 
-<h2>5. Mode Internet (désactivé par défaut)</h2>
-<p>Si vous l'activez :</p>
+<h2>5. Ce que voient les autres en Bluetooth</h2>
 <ul>
-<li>vos messages privés vers vos contacts vérifiés sont chiffrés de bout en bout ;</li>
-<li>ils sont envoyés par le réseau <strong>Tor</strong>, puis publiés sur des <strong>relais Nostr</strong> exploités par des tiers indépendants, notamment relay.damus.io, nos.lol, relay.primal.net et offchain.pub ;</li>
-<li>les relais ne peuvent pas lire vos messages. Ils voient une enveloppe chiffrée, la clé publique Nostr du destinataire, une date et une taille, et les conservent selon leurs propres règles ;</li>
-<li>le relais Tor d'entrée voit votre adresse IP, mais pas les relais Nostr contactés ni le contenu ;</li>
-<li>Samouraï Coop ne contrôle ni ne reçoit ces données.</li>
+<li>Tout appareil Bluetooth à portée peut voir qu'un téléphone utilise Wesh ou BitChat.</li>
+<li>Tant que Wesh fonctionne, y compris en arrière-plan, votre téléphone annonce régulièrement aux téléphones à portée :
+<ul>
+<li>votre <strong>surnom</strong> ;</li>
+<li>votre <strong>identifiant de pair</strong> et vos <strong>clés publiques</strong> ;</li>
+<li>les fonctions prises en charge par votre application ;</li>
+<li>les identifiants des téléphones auxquels il est relié directement.</li>
+</ul>
+</li>
+<li>Ces annonces sont relayées de téléphone en téléphone, sur 7 sauts au plus.</li>
+<li>Sur Android, Wesh peut continuer à fonctionner en arrière-plan après son ouverture. Le réglage <strong>Démarrer après redémarrage</strong> autorise un lancement après le redémarrage du téléphone, si Android le permet. Il est désactivé quand aucun choix n'a été enregistré ; un choix déjà enregistré est conservé. Ce réglage ne change pas la session en cours.</li>
+<li><strong>L'identifiant de pair et les clés publiques ne changent pas jusqu'à l'effacement d'urgence.</strong> Un appareil qui les enregistre peut reconnaître votre téléphone d'une rencontre à l'autre et voir à quels téléphones il était relié.</li>
+<li>La force du signal permet d'estimer la distance de votre téléphone.</li>
+<li><strong>Relais :</strong> vos messages peuvent passer par des téléphones tiers (Wesh ou BitChat). Chaque téléphone relais voit l'identifiant de l'émetteur et celui du destinataire, l'heure et la taille du message. Il ne voit pas le contenu d'un message privé, chiffré de bout en bout.</li>
+<li><strong>Le salon local est public.</strong> Tous les utilisateurs Wesh et BitChat à portée peuvent le lire, le conserver et le relayer.</li>
+<li><strong>Messages privés :</strong> uniquement avec les contacts vérifiés par QR code. Ils sont chiffrés de bout en bout : seul votre contact peut les lire.</li>
 </ul>
 
 <h2>6. Autorisations</h2>
 <ul>
 <li><strong>Bluetooth :</strong> communiquer avec les téléphones proches.</li>
 <li><strong>Appareil photo :</strong> scanner les QR codes. Aucune image n'est conservée ni transmise.</li>
-<li><strong>Notifications :</strong> vous prévenir des nouveaux messages. Elles sont générées sur le téléphone, sans service de notification à distance.</li>
-<li><strong>Localisation (Android 11 et antérieur) :</strong> exigée par Android pour la recherche Bluetooth. Wesh n'utilise pas votre position.</li>
+<li><strong>Notifications :</strong> vous prévenir des nouveaux messages. Elles sont créées sur le téléphone, sans service de notification à distance.</li>
+<li><strong>Localisation (Android 11 et antérieur uniquement) :</strong> Android exige cette autorisation pour rechercher des appareils Bluetooth. Wesh ne lit aucune position et n'en envoie aucune. Sur Android 12 et plus, et sur iPhone, Wesh ne la demande pas.</li>
+<li>Wesh n'utilise ni le micro, ni la photothèque, ni les contacts du téléphone.</li>
 </ul>
 
-<h2>7. Quand vous nous écrivez</h2>
+<h2>7. Signalements et support</h2>
 <ul>
-<li>Si vous écrivez au support ou envoyez un signalement, nous recevons votre adresse e-mail et le contenu que vous choisissez de joindre.</li>
-<li>Usage : répondre et traiter le signalement (intérêt légitime : sécurité du service).</li>
+<li><strong>Signaler une personne :</strong> Wesh la bloque sur votre téléphone, puis prépare un e-mail vers support@samourai.coop dans votre application de messagerie. Vous le relisez et choisissez de l'envoyer ou non.</li>
+<li>Cet e-mail contient des données sur la personne signalée : son surnom, son empreinte courte et, pour un message du salon local, son texte. Il contient aussi le motif et l'endroit (salon local, demande ou contact). Il ne contient jamais vos messages privés, vos clés ni votre position.</li>
+<li><strong>Quand vous nous écrivez,</strong> nous recevons votre adresse e-mail et ce que vous choisissez d'écrire. Votre fournisseur de messagerie traite aussi cet e-mail.</li>
+<li>Nous traitons chaque signalement sous 72 heures.</li>
+<li>Usage : vous répondre et traiter le signalement (intérêt légitime : sécurité du service).</li>
 <li>Conservation : le temps de traiter votre demande, puis suppression.</li>
 </ul>
 
-<h2>8. Vos droits</h2>
+<h2>8. Effacement d'urgence</h2>
 <ul>
-<li>Vous disposez des droits d'accès, de rectification, d'effacement, d'opposition et de limitation prévus par le RGPD.</li>
-<li>Samouraï Coop ne détient aucune donnée issue de l'application : vous exercez ces droits directement dans l'application (modification du surnom, effacement).</li>
-<li>Pour les échanges avec le support : support@samourai.coop.</li>
-<li>Vous pouvez saisir la CNIL (www.cnil.fr).</li>
+<li>Dans <strong>Réglages</strong>, maintenez la commande <strong>Tout effacer</strong> pendant trois secondes.</li>
+<li>Le raccourci <strong>Tout effacer</strong> (sur Android, depuis l'icône de l'application ; sur iPhone, depuis Spotlight ou l'app Raccourcis) ouvre la même commande à maintenir. Il n'efface jamais rien par lui-même.</li>
+<li>L'effacement supprime de ce téléphone : identité et clés, surnom, contacts, conversations, messages en attente, brouillons, note de rendez-vous, réglages et notifications<!-- INTERNET:START -->, ainsi que la clé Internet et les fichiers de Tor ; le mode Internet est désactivé<!-- INTERNET:END -->.</li>
+<li>Ensuite, Wesh revient à l'écran de bienvenue et repart avec une nouvelle identité, un nouvel identifiant de pair et de nouvelles clés.</li>
+<li><strong>iPhone :</strong> si Wesh ne peut pas confirmer que tout a été effacé, il vous indique que des données peuvent rester sur le téléphone. Il revient quand même à l'écran de bienvenue, mais garde le Bluetooth<!-- INTERNET:START --> et Internet<!-- INTERNET:END --> coupés jusqu'à un effacement confirmé. Wesh efface de nouveau au lancement suivant, avant de se connecter. Vous pouvez aussi réessayer depuis l'avis affiché en haut de l'écran principal.</li>
+<li><strong>Android :</strong> Wesh supprime ses propres fichiers et clés, puis redémarre. S'il ne peut pas le confirmer, il demande à Android d'effacer toutes les données de l'application : celle-ci se ferme et affiche l'écran de bienvenue au lancement suivant. Un effacement interrompu est terminé au lancement suivant, avant tout démarrage.</li>
+<li>L'effacement ne supprime pas ce que d'autres ont reçu ou enregistré (messages du salon local, annonces Bluetooth<!-- INTERNET:START -->, copies sur les relais Nostr<!-- INTERNET:END -->), ni les sauvegardes iPhone déjà faites (§4).</li>
+<li>Désinstaller l'application supprime aussi ses données. Sur iPhone, les clés restées dans le trousseau sont effacées à la réinstallation suivante.</li>
 </ul>
 
-<h2>9. Âge minimum</h2>
+<h2>9. Vos droits</h2>
+<ul>
+<li>Vous disposez des droits d'accès, de rectification, d'effacement, d'opposition et de limitation prévus par le RGPD.</li>
+<li>L'application n'envoie rien à Samouraï Coop. Les données de votre téléphone se gèrent directement dans l'application (modification du surnom, effacement).</li>
+<li>Samouraï Coop détient seulement les e-mails qu'on lui envoie (§7). Un signalement peut contenir le surnom, l'empreinte courte et un texte public d'une autre personne. Pour exercer vos droits sur ces e-mails, y compris si vous avez été signalé : support@samourai.coop.</li>
+<li>Vous pouvez saisir la CNIL (www.cnil.fr) ou l'autorité de protection des données de votre pays.</li>
+</ul>
+
+<h2>10. Âge minimum</h2>
 <p>Wesh est réservé aux personnes de <strong>16 ans et plus</strong>.</p>
 
-<h2>10. Modifications</h2>
+<h2>11. Modifications</h2>
 <p>Toute modification est publiée sur cette page avec sa date. Les changements importants sont signalés dans la note de version.</p>
+
+<!-- INTERNET:START -->
+<h2>12. Mode Internet (optionnel, désactivé par défaut)</h2>
+<ul>
+<li>Vous l'activez dans <strong>Connexion</strong>. L'effacement d'urgence le désactive.</li>
+<li>Il sert uniquement aux messages privés vers vos contacts vérifiés dont le QR code contient une clé Internet.</li>
+<li>Les messages passent par le réseau <strong>Tor</strong>, puis par trois relais <strong>Nostr</strong> publics que Wesh n'exploite pas : relay.damus.io, relay.primal.net et relay.snort.social. Wesh n'utilise aucun autre relais.</li>
+<li>Les relais ne voient ni votre adresse IP ni le contenu. Ils voient la clé Internet du destinataire, l'heure et la taille des messages, et peuvent relier vos envois à votre clé.</li>
+<li>Votre QR code contient toujours votre clé Internet, même quand le mode Internet est désactivé. Cette clé est créée sur le téléphone à la fin de l'accueil et ne sert pas sur le réseau tant que vous n'activez pas le mode. Quiconque a votre QR code la connaît.</li>
+<li>Un contact vérifié dont le mode Internet est activé peut vous envoyer des messages par les relais même si vous ne l'activez jamais : les relais voient alors votre clé Internet, l'heure et la taille de ces messages. Vous ne les recevez qu'une fois le mode activé, dans un délai de 24 heures.</li>
+<li>Le relais Tor d'entrée voit votre adresse IP, mais pas les relais contactés ni le contenu.</li>
+<li>Les relais peuvent conserver les messages chiffrés selon leurs propres règles. <strong>Ces copies ne peuvent pas être supprimées</strong>, ni par vous, ni par Samouraï Coop, ni par l'effacement d'urgence.</li>
+<li>Samouraï Coop ne contrôle ni ne reçoit ces données.</li>
+<li>Sur le téléphone, Wesh garde votre clé Internet et les fichiers de Tor. L'effacement d'urgence les supprime ; une nouvelle clé est créée ensuite.</li>
+</ul>
+<!-- INTERNET:END -->
 </main>
 <footer class="site-footer">
 <div class="wrap">
 <p>Wesh est un logiciel libre et open source édité sans but lucratif par <a href="https://samourai.world">Samouraï Coop</a>, société coopérative française et studio d'ingénierie open source.</p>
-<nav aria-label="Pied de page"><ul><li><a href="confidentialite.html" aria-current="page">Confidentialité</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="support.html">Support</a></li><li><a href="transparence.html">Transparence</a></li><li><a href="dons.html">Dons</a></li><li><a href="securite.html">Sécurité</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">Code iOS</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Code Android</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
+<nav aria-label="Pied de page"><ul><li><a href="confidentialite.html" aria-current="page">Confidentialité</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="support.html">Support</a></li><li><a href="transparence.html">Transparence</a></li><li><a href="dons.html">Dons</a></li><li><a href="securite.html">Sécurité</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">Code iOS</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Code Android</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">Ce site ne dépose aucun cookie, n'utilise aucun traceur et ne charge aucune ressource externe. © 2026 Samouraï Coop.</p>
 </div>
 </footer>

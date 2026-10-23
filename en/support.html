@@ -33,7 +33,7 @@
 <p>Keeping in touch with people nearby when the mobile network or the Internet is cut off: natural disaster, cyberattack, outage, shutdown. Phones pass messages to each other over Bluetooth.</p>
 
 <h3>Do I need an account?</h3>
-<p>No. Pick a nickname, that's all. Your keys are generated on your phone and never leave it. Your nickname is visible to people in range and does not prove who you are.</p>
+<p>No. Pick a nickname, that's all. Your keys are created on your phone, and Wesh does not send them to anyone (backups: see <a href="privacy.html">Privacy</a>, §4). Your nickname is visible to people in range and does not prove who you are.</p>
 
 <h3>Why does Wesh ask for Bluetooth and the camera?</h3>
 <p>Without Bluetooth, Wesh cannot reach nearby phones. The camera scans QR codes; no image is kept. On Android, allow notifications to be told about new messages.</p>
@@ -50,14 +50,17 @@
 <h3>What is "Requests"?</h3>
 <p>Private messages from people you have not verified arrive there, with no notification. Do not trust a nickname: only in-person QR verification counts.</p>
 
+<!-- INTERNET:START -->
 <h3>What is Internet mode for?</h3>
-<p>It is off by default. Turned on in <strong>Settings</strong>, it lets you write to verified contacts out of Bluetooth range. Messages travel encrypted over the Tor network, then through public relays, which cannot read them but can see that a message is addressed to a given key, and when. The local room stays Bluetooth only.</p>
+<p>It is off by default. Turned on in <strong>Connection</strong>, it lets you write to verified contacts out of Bluetooth range. Messages travel encrypted over the Tor network, then through three public Nostr relays: relay.damus.io, relay.primal.net and relay.snort.social. These relays cannot read the messages. They see which key a message is addressed to, when, and its size. The local room stays Bluetooth only.</p>
+<!-- INTERNET:END -->
 
 <h3>How do I block or report someone?</h3>
-<p>Tap a message or a nickname, then <strong>Block</strong>: you will receive nothing more from that person. <strong>Report</strong> hides the content on your phone and lets you send it to us. Wesh has no server: we cannot delete a message on other phones.</p>
+<p>Tap a message or a nickname, then <strong>Block</strong>: you will receive nothing more from that person. <strong>Report</strong> blocks the person and prepares an email to support@samourai.coop in your mail app. You review it and choose whether to send it. Wesh has no server: we cannot delete a message on other phones.</p>
 
 <h3>How do I erase everything in an emergency?</h3>
-<p>In <strong>Settings</strong>, <strong>Erase all data</strong> deletes, after confirmation, your keys, contacts, conversations and drafts. You get a new identity; your contacts will need to verify you again. Messages already received by other phones are not recalled.</p>
+<p>In <strong>Settings</strong>, hold <strong>Erase everything</strong> for three seconds. The <strong>Erase everything</strong> shortcut (app icon on Android, Spotlight or Shortcuts on iPhone) opens the same control. It never erases by itself.</p>
+<p>Wesh deletes from this phone your keys, nickname, contacts, conversations, drafts, meeting note and settings. It then returns to the welcome screen with a new identity. Your contacts will need to verify you again. On iPhone, if the erase is not confirmed, Wesh tells you and keeps Bluetooth off until an erase is confirmed. Messages already received by other phones are not recalled. Details: <a href="privacy.html">privacy</a>, §8.</p>
 
 <h3>Why don't my messages arrive?</h3>
 <p>You need at least one phone in range, or Internet mode for a verified contact. Keep Bluetooth on and the app open: phones limit background activity.</p>
@@ -80,7 +83,7 @@
 <footer class="site-footer">
 <div class="wrap">
 <p>Wesh is free and open-source software, published on a non-profit basis by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
-<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html" aria-current="page">Support</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
+<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html" aria-current="page">Support</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="legal.html">Legal notice</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">This site sets no cookies, uses no trackers and loads no external resources. © 2026 Samouraï Coop.</p>
 </div>
 </footer>

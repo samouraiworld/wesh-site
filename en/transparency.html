@@ -24,7 +24,7 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Transparency</h1>
-<p class="lead"><strong>We have no data to hand over.</strong> Wesh has no accounts and no publisher-run server. What is not collected cannot be disclosed, lost or seized.</p>
+<p class="lead"><strong>We have no app data to hand over.</strong> Wesh has no accounts and no publisher-run server. What is not collected cannot be disclosed, lost or seized.</p>
 
 <h2>What Samouraï Coop does not hold</h2>
 <ul>
@@ -40,20 +40,22 @@
 <li>Read a private message: it is end-to-end encrypted between you and your verified contact.</li>
 <li>Delete a message on other phones.</li>
 <li>Remove someone from the network.</li>
-<li>Recover your data after <strong>Erase all data</strong>.</li>
+<li>Recover your data after <strong>Erase everything</strong>. This erase does not delete copies kept by other people<!-- INTERNET:START -->, by Nostr relays<!-- INTERNET:END --> or in backups already made.</li>
 </ul>
 
 <h2>What we may hold</h2>
 <ul>
-<li>Emails you send us (support, reports, security) and whatever you choose to include. We keep them while we handle your request, then delete them.</li>
+<li>Emails you send us (support, reports, security) and whatever you choose to include. A report may contain the reported person's nickname, short fingerprint and a public message. We keep these emails while we handle your request, then delete them.</li>
 <li>The source code and released versions of the app, which are public.</li>
 </ul>
 
 <h2>What others can see</h2>
 <ul>
-<li><strong>People in range:</strong> your nickname, a temporary identifier, your public keys and everything you write in the local room.</li>
-<li><strong>Nostr relays</strong> (Internet mode only): an encrypted envelope, the recipient's public key, a date and a size. They are run by independent third parties and keep this data under their own rules.</li>
+<li><strong>People in range:</strong> your nickname, your peer ID and your public keys, which stay the same until the emergency erase, and everything you write in the local room.</li>
+<!-- INTERNET:START -->
+<li><strong>Nostr relays</strong> (Internet mode only): an encrypted envelope, the recipient's Internet key, the time and the size. They can link your sends to your key. Wesh uses three public relays run by third parties: relay.damus.io, relay.primal.net and relay.snort.social. They keep this data under their own rules.</li>
 <li><strong>The Tor entry relay</strong> (Internet mode only): your IP address, but not which relays you reach or what you send.</li>
+<!-- INTERNET:END -->
 <li><strong>Apple and Google</strong> process download data under their own rules. We do not receive the list of people who install Wesh.</li>
 <li><strong>GitHub</strong> hosts this site and may log visitors' IP addresses for the security of its service. We have no access to those logs. This site sets no cookies and loads no external resources.</li>
 </ul>
@@ -72,7 +74,7 @@
 <footer class="site-footer">
 <div class="wrap">
 <p>Wesh is free and open-source software, published on a non-profit basis by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
-<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html" aria-current="page">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
+<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html" aria-current="page">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="legal.html">Legal notice</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">This site sets no cookies, uses no trackers and loads no external resources. © 2026 Samouraï Coop.</p>
 </div>
 </footer>

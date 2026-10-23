@@ -38,9 +38,11 @@
 <ul class="modes">
 <li><span class="tag tag-public">Public</span><div><h3>Local room</h3><p>Write to everyone in range who uses Wesh or BitChat. The more phones there are, the further it reaches.</p></div></li>
 <li><span class="tag tag-private">Private</span><div><h3>Verified contacts</h3><p>Swap QR codes in person. Your private messages are then end-to-end encrypted.</p></div></li>
-<li><span class="tag tag-internet">Via Internet</span><div><h3>If you turn it on</h3><p>Off by default. Reaches verified contacts out of range, through Tor and public relays, while the Internet still works.</p></div></li>
+<!-- INTERNET:START -->
+<li><span class="tag tag-internet">Via Internet</span><div><h3>If you turn it on</h3><p>Off by default. Reaches verified contacts out of range, through Tor and three public relays, while the Internet still works.</p></div></li>
+<!-- INTERNET:END -->
 </ul>
-<p>No phone number, no email. Your keys are created on your phone and your data stays there, encrypted. <strong>Erase all data</strong>, in settings, deletes everything after confirmation.</p>
+<p>No phone number, no email. Your keys are created on your phone. Wesh excludes its data from Google backups; on iPhone, its sensitive files are excluded from iCloud backups, and restoring is still to be verified (see <a href="privacy.html">Privacy</a>, §4). In an emergency, hold <strong>Erase everything</strong> for three seconds, in <strong>Settings</strong>.</p>
 
 <h2 id="limits">Good to know</h2>
 <div class="band-public">
@@ -48,12 +50,15 @@
 </div>
 <ul class="limits">
 <li><strong>It needs phones nearby.</strong> A few dozen metres, more through relays. Alone, without Internet mode, your messages wait.</li>
-<li><strong>Your phone is detectable.</strong> It broadcasts your nickname and public keys to nearby devices. These keys stay the same until you reset your identity.</li>
-<li><strong>No promise of anonymity.</strong> A nickname does not prove who someone is. In Internet mode, the Tor entry relay sees your IP address.</li>
+<li><strong>Your phone is detectable.</strong> It broadcasts your nickname, your identifier and your public keys to nearby devices. They stay the same until you use the emergency erase.</li>
+<li><strong>No promise of anonymity.</strong> A nickname does not prove who someone is.<!-- INTERNET:START --> In Internet mode, the Tor entry relay sees your IP address.<!-- INTERNET:END --></li>
 </ul>
 
 <h2 id="download">Download</h2>
 <p>Wesh is not available yet. App Store, Google Play and APK links will be posted here.</p>
+<ul>
+<li>Signed Android APK on GitHub Releases: coming soon.</li>
+</ul>
 <p class="muted">iPhone on iOS 16 or later, Android 8.0 or later. For people aged 16 and over.</p>
 
 <h2 id="commons">A commons</h2>
@@ -66,7 +71,7 @@
 <footer class="site-footer">
 <div class="wrap">
 <p>Wesh is free and open-source software, published on a non-profit basis by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
-<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
+<nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="legal.html">Legal notice</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">This site sets no cookies, uses no trackers and loads no external resources. © 2026 Samouraï Coop.</p>
 </div>
 </footer>

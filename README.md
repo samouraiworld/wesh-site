@@ -17,6 +17,7 @@ The visual style follows the Wesh "Pavé" design system: asphalt (night) and cha
 | Transparency | `transparence.html` → `/transparence` | `en/transparency.html` → `/en/transparency` |
 | Donations | `dons.html` → `/dons` | `en/donate.html` → `/en/donate` |
 | Security | `securite.html` → `/securite` | `en/security.html` → `/en/security` |
+| Legal notice | `mentions-legales.html` → `/mentions-legales` | `en/legal.html` → `/en/legal` |
 
 Other files:
 
@@ -47,6 +48,7 @@ Every change goes through a pull request; never commit to `main` directly.
 
 - The privacy policy and terms reproduce the V1 legal documents (`POLITIQUE-CONFIDENTIALITE.md`, `CONDITIONS-UTILISATION.md`). Change the source documents first, then the pages, and update the version date.
 - French and English pages must say the same thing.
+- Text that only holds while Internet mode ships sits between `<!-- INTERNET:START -->` and `<!-- INTERNET:END -->`, as in the app's privacy policy. Keep these markers paired.
 - Do not announce availability in a given country or a release date until it is confirmed.
 - Never use « anonyme », « intraçable », « sécurisé », "anonymous", "untraceable" or "secure" as a promise.
 - Hi-vis yellow (`--public`) is a fill for "public" only, never a text colour.
