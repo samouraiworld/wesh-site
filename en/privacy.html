@@ -24,7 +24,7 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Privacy policy</h1>
-<p class="meta">Version 1.1 — last updated 21 October 2026. <a href="../confidentialite.html" hreflang="fr" lang="fr">Version française</a>.</p>
+<p class="meta">Version 1.3 — last updated 23 October 2026. <a href="../confidentialite.html" hreflang="fr" lang="fr">Version française</a>.</p>
 
 <h2>1. Who we are</h2>
 <p>Wesh is a free, open source, non-profit app published by <strong>Samouraï Coop</strong>, SARL SCOP (French worker cooperative), 149 avenue du Maine, 75014 Paris, France.<br>Contact: support@samourai.coop. Security issues: security@samourai.coop.</p>
@@ -91,8 +91,8 @@
 <li><strong>Reporting someone:</strong> Wesh blocks them on your phone, then prepares an email to support@samourai.coop in your mail app. You review it and choose whether to send it.</li>
 <li>This email holds data about the reported person: their nickname, their short fingerprint and, for a local-room message, its text. It also holds the reason and where you met them (local room, request or contact). It never holds your private messages, your keys or your location.</li>
 <li><strong>When you write to us,</strong> we receive your email address and whatever you choose to write. Your email provider also processes that email.</li>
-<li>We handle each report within 72 hours.</li>
 <li>Purpose: to reply and handle the report (legitimate interest: service safety).</li>
+<li>Timing: handled on a best-effort basis according to severity, with no contractual promise of a response within any fixed period.</li>
 <li>Retention: as long as needed to handle your request, then deletion.</li>
 </ul>
 
@@ -128,9 +128,8 @@
 <li>You turn it on in <strong>Connection</strong>. The emergency erase turns it off.</li>
 <li>It is used only for private messages to verified contacts whose QR code carries an Internet key.</li>
 <li>Messages go through the <strong>Tor</strong> network, then through three public <strong>Nostr</strong> relays that Wesh does not run: relay.damus.io, relay.primal.net and relay.snort.social. Wesh uses no other relay.</li>
-<li>Relays see neither your IP address nor the content. They see the recipient's Internet key, the time and size of messages, and can link your sends to your key.</li>
-<li>Your QR code always carries your Internet key, even while Internet mode is off. The key is created on the phone at the end of the welcome and is not used on the network until you turn the mode on. Anyone who has your QR code knows it.</li>
-<li>A verified contact who has Internet mode on may send you messages through the relays even if you never turn it on: the relays then see your Internet key and the time and size of those messages. You receive them only once you turn the mode on, within 24 hours.</li>
+<li>Relays see neither your IP address nor the content. For each envelope, they see the recipient's Internet key, time, size and transport metadata. The outer envelope is signed by a one-time ephemeral sender key, so it does not expose the sender's durable protocol identity. This does not rule out traffic correlation by a third party.</li>
+<li>Anyone who has your QR code knows your Internet key.</li>
 <li>The Tor entry relay sees your IP address, but not which relays you reach or what you send.</li>
 <li>Relays may keep the encrypted messages under their own rules. <strong>These copies cannot be deleted</strong>, not by you, not by Samouraï Coop, not by the emergency erase.</li>
 <li>Samouraï Coop neither controls nor receives this data.</li>

@@ -53,7 +53,7 @@
 <ul>
 <li><strong>Les personnes à portée :</strong> votre surnom, votre identifiant de pair et vos clés publiques, stables jusqu'à l'effacement d'urgence, et tout ce que vous écrivez dans le salon local.</li>
 <!-- INTERNET:START -->
-<li><strong>Les relais Nostr</strong> (mode Internet seulement) : une enveloppe chiffrée, la clé Internet du destinataire, l'heure et la taille. Ils peuvent relier vos envois à votre clé. Wesh utilise trois relais publics exploités par des tiers : relay.damus.io, relay.primal.net et relay.snort.social. Ils conservent ces données selon leurs propres règles.</li>
+<li><strong>Les relais Nostr</strong> (mode Internet seulement) : une enveloppe chiffrée, la clé Internet du destinataire, l'heure, la taille et les métadonnées de transport. L'enveloppe externe porte une clé d'expéditeur éphémère à usage unique, pas l'identité protocolaire durable de l'expéditeur. Une corrélation de trafic par un tiers reste possible. Wesh utilise trois relais publics exploités par des tiers : relay.damus.io, relay.primal.net et relay.snort.social. Ils conservent ces données selon leurs propres règles.</li>
 <li><strong>Le relais Tor d'entrée</strong> (mode Internet seulement) : votre adresse IP, mais pas les relais contactés ni le contenu.</li>
 <!-- INTERNET:END -->
 <li><strong>Apple et Google</strong> traitent les données de téléchargement selon leurs propres règles. Nous ne recevons pas la liste des personnes qui installent Wesh.</li>

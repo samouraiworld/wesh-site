@@ -24,7 +24,7 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Politique de confidentialité</h1>
-<p class="meta">Version 1.1 — mise à jour le 21 octobre 2026. <a href="en/privacy.html" hreflang="en" lang="en">English version</a>.</p>
+<p class="meta">Version 1.3 — mise à jour le 23 octobre 2026. <a href="en/privacy.html" hreflang="en" lang="en">English version</a>.</p>
 
 <h2>1. Qui sommes-nous</h2>
 <p>Wesh est une application gratuite, open source et à but non lucratif éditée par <strong>Samouraï Coop</strong>, SARL SCOP, 149 avenue du Maine, 75014 Paris.<br>Contact : support@samourai.coop. Failles de sécurité : security@samourai.coop.</p>
@@ -91,8 +91,8 @@
 <li><strong>Signaler une personne :</strong> Wesh la bloque sur votre téléphone, puis prépare un e-mail vers support@samourai.coop dans votre application de messagerie. Vous le relisez et choisissez de l'envoyer ou non.</li>
 <li>Cet e-mail contient des données sur la personne signalée : son surnom, son empreinte courte et, pour un message du salon local, son texte. Il contient aussi le motif et l'endroit (salon local, demande ou contact). Il ne contient jamais vos messages privés, vos clés ni votre position.</li>
 <li><strong>Quand vous nous écrivez,</strong> nous recevons votre adresse e-mail et ce que vous choisissez d'écrire. Votre fournisseur de messagerie traite aussi cet e-mail.</li>
-<li>Nous traitons chaque signalement sous 72 heures.</li>
 <li>Usage : vous répondre et traiter le signalement (intérêt légitime : sécurité du service).</li>
+<li>Délai : traitement au mieux selon la gravité, sans garantie contractuelle de réponse dans un délai chiffré.</li>
 <li>Conservation : le temps de traiter votre demande, puis suppression.</li>
 </ul>
 
@@ -128,9 +128,8 @@
 <li>Vous l'activez dans <strong>Connexion</strong>. L'effacement d'urgence le désactive.</li>
 <li>Il sert uniquement aux messages privés vers vos contacts vérifiés dont le QR code contient une clé Internet.</li>
 <li>Les messages passent par le réseau <strong>Tor</strong>, puis par trois relais <strong>Nostr</strong> publics que Wesh n'exploite pas : relay.damus.io, relay.primal.net et relay.snort.social. Wesh n'utilise aucun autre relais.</li>
-<li>Les relais ne voient ni votre adresse IP ni le contenu. Ils voient la clé Internet du destinataire, l'heure et la taille des messages, et peuvent relier vos envois à votre clé.</li>
-<li>Votre QR code contient toujours votre clé Internet, même quand le mode Internet est désactivé. Cette clé est créée sur le téléphone à la fin de l'accueil et ne sert pas sur le réseau tant que vous n'activez pas le mode. Quiconque a votre QR code la connaît.</li>
-<li>Un contact vérifié dont le mode Internet est activé peut vous envoyer des messages par les relais même si vous ne l'activez jamais : les relais voient alors votre clé Internet, l'heure et la taille de ces messages. Vous ne les recevez qu'une fois le mode activé, dans un délai de 24 heures.</li>
+<li>Les relais ne voient ni votre adresse IP ni le contenu. Pour chaque enveloppe, ils voient la clé Internet du destinataire, l'heure, la taille et les métadonnées de transport. L'enveloppe externe est signée par une clé d'expéditeur éphémère à usage unique : elle n'expose pas l'identité protocolaire durable de l'expéditeur. Cela n'exclut pas des corrélations de trafic par un tiers.</li>
+<li>Quiconque a votre QR code connaît votre clé Internet.</li>
 <li>Le relais Tor d'entrée voit votre adresse IP, mais pas les relais contactés ni le contenu.</li>
 <li>Les relais peuvent conserver les messages chiffrés selon leurs propres règles. <strong>Ces copies ne peuvent pas être supprimées</strong>, ni par vous, ni par Samouraï Coop, ni par l'effacement d'urgence.</li>
 <li>Samouraï Coop ne contrôle ni ne reçoit ces données.</li>
