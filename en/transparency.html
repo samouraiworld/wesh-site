@@ -24,12 +24,12 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Transparency</h1>
-<p class="lead"><strong>We have no app data to hand over.</strong> Wesh has no accounts and no publisher-run server. What is not collected cannot be disclosed, lost or seized.</p>
+<p class="lead"><strong>Samouraï Coop does not host your conversations.</strong> Wesh has no accounts or publisher-run messaging server. If you choose to email support, we receive what you send: this information may include data from the app.</p>
 
-<h2>What Samouraï Coop does not hold</h2>
+<h2>What the app does not automatically address to Samouraï Coop</h2>
 <ul>
 <li>Your messages, public or private.</li>
-<li>Your contacts, your nickname, your keys.</li>
+<li>Your contacts, your nickname, your public keys. Wesh does not transmit your private keys.</li>
 <li>Your location, your phone number, your email address.</li>
 <li>The list of people who use Wesh, or any connection log.</li>
 <li>Any usage statistics, crash reports or advertising identifiers.</li>
@@ -51,9 +51,9 @@
 
 <h2>What others can see</h2>
 <ul>
-<li><strong>People in range:</strong> your nickname, your peer ID and your public keys, which stay the same until the emergency erase, and everything you write in the local room.</li>
+<li><strong>People in range:</strong> your nickname, your peer ID and your public keys, which stay the same until the emergency erase, and everything you write in the local room. Automatic announcements also contain up to ten directly connected neighbour IDs: these proximity and routing links are readable, even without posting in the room. They are not imported from the phone's address book and do not necessarily represent contacts verified by QR code.</li>
 <!-- INTERNET:START -->
-<li><strong>Nostr relays</strong> (Internet mode only): an encrypted envelope, the recipient's Internet key, time, size and transport metadata. The outer envelope carries a one-time ephemeral sender key, not the sender's durable protocol identity. Traffic correlation by a third party remains possible. Wesh uses three public relays run by third parties: relay.damus.io, relay.primal.net and relay.snort.social. They keep this data under their own rules.</li>
+<li><strong>Nostr relays</strong> (Internet mode only): an encrypted envelope, the recipient's Internet key (<code>p</code> tag), type, timestamp, size and transport metadata. To receive, Wesh also sends them your own Internet key in the <code>#p</code> filter, even without sending text. These fields remain readable; relays cannot read the private text. The outer envelope carries a one-time ephemeral sender key, not the sender's durable protocol identity. Exchanges or relationships may still be correlated. Wesh uses three public relays run by third parties: relay.damus.io, relay.primal.net and relay.snort.social. They may keep encrypted messages and readable metadata under their own rules.</li>
 <li><strong>The Tor entry relay</strong> (Internet mode only): your IP address, but not which relays you reach or what you send.</li>
 <!-- INTERNET:END -->
 <li><strong>Apple and Google</strong> process download data under their own rules. We do not receive the list of people who install Wesh.</li>
@@ -61,7 +61,7 @@
 </ul>
 
 <h2 id="requests">Requests from authorities</h2>
-<p>For data from the app, our answer is always the same: we do not have it. Only correspondence sent to our email addresses could be concerned.</p>
+<p>We do not host the app's conversations. A request could, however, concern information that people chose to send to our email addresses, including in a report.</p>
 <p>In line with the <a href="terms.html">terms of use</a>, we may pass clearly illegal content reported to us to the competent authorities, where the law provides.</p>
 <dl class="facts">
 <dt>Address for official requests</dt>
@@ -73,7 +73,7 @@
 </main>
 <footer class="site-footer">
 <div class="wrap">
-<p>Wesh is free and open-source software, published on a non-profit basis by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
+<p>Wesh is free and open-source software, published by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
 <nav aria-label="Footer"><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html" aria-current="page">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="legal.html">Legal notice</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">This site sets no cookies, uses no trackers and loads no external resources. © 2026 Samouraï Coop.</p>
 </div>

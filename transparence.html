@@ -24,12 +24,12 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Transparence</h1>
-<p class="lead"><strong>Nous n'avons aucune donnée de l'application à remettre.</strong> Wesh n'a ni compte ni serveur de l'éditeur. Ce qui n'est pas collecté ne peut être ni divulgué, ni perdu, ni saisi.</p>
+<p class="lead"><strong>Samouraï Coop n'héberge pas vos conversations.</strong> Wesh n'a ni compte ni serveur de messagerie de l'éditeur. Si vous choisissez d'envoyer un e-mail au support, nous recevons ce que vous transmettez : ces informations peuvent inclure des données issues de l'application.</p>
 
-<h2>Ce que Samouraï Coop ne détient pas</h2>
+<h2>Ce que l'application n'adresse pas automatiquement à Samouraï Coop</h2>
 <ul>
 <li>Vos messages, publics ou privés.</li>
-<li>Vos contacts, votre surnom, vos clés.</li>
+<li>Vos contacts, votre surnom, vos clés publiques. Wesh ne transmet pas vos clés privées.</li>
 <li>Votre position, votre numéro de téléphone, votre adresse e-mail.</li>
 <li>La liste des personnes qui utilisent Wesh, ni aucun journal de connexion.</li>
 <li>Aucune statistique d'usage, aucun rapport de plantage, aucun identifiant publicitaire.</li>
@@ -51,9 +51,9 @@
 
 <h2>Ce que d'autres peuvent voir</h2>
 <ul>
-<li><strong>Les personnes à portée :</strong> votre surnom, votre identifiant de pair et vos clés publiques, stables jusqu'à l'effacement d'urgence, et tout ce que vous écrivez dans le salon local.</li>
+<li><strong>Les personnes à portée :</strong> votre surnom, votre identifiant de pair et vos clés publiques, stables jusqu'à l'effacement d'urgence, et tout ce que vous écrivez dans le salon local. Les annonces automatiques contiennent aussi jusqu'à dix identifiants de voisins directement connectés : ces liens de proximité et de routage sont lisibles, même sans publication dans le salon. Ils ne proviennent pas du carnet d'adresses du téléphone et ne correspondent pas nécessairement aux contacts vérifiés par QR code.</li>
 <!-- INTERNET:START -->
-<li><strong>Les relais Nostr</strong> (mode Internet seulement) : une enveloppe chiffrée, la clé Internet du destinataire, l'heure, la taille et les métadonnées de transport. L'enveloppe externe porte une clé d'expéditeur éphémère à usage unique, pas l'identité protocolaire durable de l'expéditeur. Une corrélation de trafic par un tiers reste possible. Wesh utilise trois relais publics exploités par des tiers : relay.damus.io, relay.primal.net et relay.snort.social. Ils conservent ces données selon leurs propres règles.</li>
+<li><strong>Les relais Nostr</strong> (mode Internet seulement) : une enveloppe chiffrée, la clé Internet du destinataire (tag <code>p</code>), le type, l'horodatage, la taille et les métadonnées de transport. Pour recevoir, Wesh leur transmet aussi votre propre clé Internet dans le filtre <code>#p</code>, même sans envoi de texte. Ces champs restent lisibles ; les relais ne lisent pas le texte privé. L'enveloppe externe porte une clé d'expéditeur éphémère à usage unique, pas l'identité protocolaire durable de l'expéditeur. Une corrélation des échanges ou des relations reste possible. Wesh utilise trois relais publics exploités par des tiers : relay.damus.io, relay.primal.net et relay.snort.social. Ils peuvent conserver les messages chiffrés et les métadonnées lisibles selon leurs propres règles.</li>
 <li><strong>Le relais Tor d'entrée</strong> (mode Internet seulement) : votre adresse IP, mais pas les relais contactés ni le contenu.</li>
 <!-- INTERNET:END -->
 <li><strong>Apple et Google</strong> traitent les données de téléchargement selon leurs propres règles. Nous ne recevons pas la liste des personnes qui installent Wesh.</li>
@@ -61,7 +61,7 @@
 </ul>
 
 <h2 id="demandes">Demandes des autorités</h2>
-<p>Pour les données issues de l'application, notre réponse est toujours la même : nous ne les avons pas. Seuls les échanges envoyés à nos adresses e-mail pourraient être concernés.</p>
+<p>Nous n'hébergeons pas les conversations de l'application. Une demande pourrait toutefois concerner les informations que des personnes ont choisi de transmettre à nos adresses e-mail, notamment dans un signalement.</p>
 <p>Conformément aux <a href="conditions.html">conditions d'utilisation</a>, nous pouvons transmettre aux autorités compétentes les contenus manifestement illicites qui nous sont signalés, selon la loi.</p>
 <dl class="facts">
 <dt>Adresse pour les demandes officielles</dt>
@@ -73,7 +73,7 @@
 </main>
 <footer class="site-footer">
 <div class="wrap">
-<p>Wesh est un logiciel libre et open source édité sans but lucratif par <a href="https://samourai.world">Samouraï Coop</a>, société coopérative française et studio d'ingénierie open source.</p>
+<p>Wesh est un logiciel libre et gratuit, édité par <a href="https://samourai.world">Samouraï Coop</a>, société coopérative française et studio d'ingénierie open source.</p>
 <nav aria-label="Pied de page"><ul><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="support.html">Support</a></li><li><a href="transparence.html" aria-current="page">Transparence</a></li><li><a href="dons.html">Dons</a></li><li><a href="securite.html">Sécurité</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">Code iOS</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Code Android</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">Ce site ne dépose aucun cookie, n'utilise aucun traceur et ne charge aucune ressource externe. © 2026 Samouraï Coop.</p>
 </div>
