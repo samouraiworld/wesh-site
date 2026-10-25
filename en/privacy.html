@@ -24,15 +24,15 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Privacy policy</h1>
-<p class="meta">Version 1.3 — last updated 24 October 2026. <a href="../confidentialite.html" hreflang="fr" lang="fr">Version française</a>.</p>
+<p class="meta">Version 1.4 — last updated 25 October 2026. <a href="../confidentialite.html" hreflang="fr" lang="fr">Version française</a>.</p>
 
 <h2>1. Who we are</h2>
-<p>Wesh is a free, open source, non-profit app published by <strong>SAMOURAI COOP</strong>, a French cooperative limited liability company with variable capital, registered under number 830 485 108 R.C.S. Paris, whose registered office is at 149 avenue du Maine, 75014 Paris, France.<br>Contact: support@samourai.coop. Security issues: security@samourai.coop.</p>
+<p>Wesh is a free, open source app published by <strong>SAMOURAI COOP</strong>, a French cooperative limited liability company with variable capital, registered under number 830 485 108 R.C.S. Paris, whose registered office is at 149 avenue du Maine, 75014 Paris, France.<br>Contact: support@samourai.coop. Security issues: security@samourai.coop.</p>
 
 <h2>2. In short</h2>
 <ul>
 <li>No account, no phone number, no email address required.</li>
-<li>Samouraï Coop runs no server for Wesh and receives none of your messages, contacts or location.</li>
+<li>Samouraï Coop runs no server for Wesh. Exchanges are not automatically addressed to it. If you choose to email support, it receives what you send (§7).</li>
 <li>Wesh does not read your location.</li>
 <li>No analytics, no crash reporting, no ads, no tracking.</li>
 <li>Over Bluetooth, nearby phones see your nickname and an identifier that does not change until you use the emergency erase (§5).</li>
@@ -46,7 +46,7 @@
 <li>A private message not yet delivered is kept encrypted for at most 24 hours.</li>
 <li>Recent local-room messages may be kept for a few hours, so they can be relayed to phones that arrive later.</li>
 <li>On iPhone, Wesh may also keep, for at most 24 hours, an encrypted private message that a verified contact hands it for someone else. You cannot read it.</li>
-<li>Keys are held in the iOS Keychain or protected by the Android Keystore. Wesh does not send them to anyone (backups: §4).</li>
+<li>Private keys are held in the iOS Keychain or protected by the Android Keystore. Wesh does not transmit these private keys. Public keys are shared with other devices (§5; backups: §4).</li>
 </ul>
 
 <h2>4. Backups</h2>
@@ -65,9 +65,10 @@
 <li>your <strong>nickname</strong>;</li>
 <li>your <strong>peer ID</strong> and your <strong>public keys</strong>;</li>
 <li>the features your app supports;</li>
-<li>the IDs of the phones it is directly linked to.</li>
+<li>up to <strong>10 IDs of peers it is directly linked to</strong>.</li>
 </ul>
 </li>
+<li>These announcements are sent automatically, even if you post nothing in the local room. They are readable by the peers that receive them: signing does not encrypt them. The neighbour list describes proximity and routing links; it is not imported from the phone's address book and does not necessarily represent contacts verified by QR code.</li>
 <li>These announcements are relayed from phone to phone, over at most 7 hops.</li>
 <li>On Android, Wesh may continue running in the background after you open it. <strong>Start after restart</strong> allows startup after the phone restarts, if Android permits it. It defaults to off when no choice was recorded; an existing recorded choice is preserved. This setting does not change the current session.</li>
 <li><strong>Your peer ID and public keys do not change until you use the emergency erase.</strong> A device that records them can recognise your phone from one encounter to the next and see which phones it was linked to.</li>
@@ -111,7 +112,7 @@
 <h2>9. Your rights</h2>
 <ul>
 <li>You have the GDPR rights of access, rectification, erasure, objection and restriction.</li>
-<li>The app sends nothing to Samouraï Coop. You manage the data on your phone directly in the app (edit nickname, erase).</li>
+<li>You manage the data on your phone directly in the app (edit nickname, erase). Exchanges are not automatically addressed to Samouraï Coop; if you choose to email support, it receives what you send (§7).</li>
 <li>Samouraï Coop only holds the emails sent to it (§7). A report may contain another person's nickname, short fingerprint and a public text. To exercise your rights over these emails, including if you were reported: support@samourai.coop.</li>
 <li>You may complain to the CNIL (www.cnil.fr) or your local data protection authority.</li>
 </ul>
@@ -128,18 +129,19 @@
 <li>You turn it on in <strong>Connection</strong>. The emergency erase turns it off.</li>
 <li>It is used only for private messages to verified contacts whose QR code carries an Internet key.</li>
 <li>Messages go through the <strong>Tor</strong> network, then through three public <strong>Nostr</strong> relays that Wesh does not run: relay.damus.io, relay.primal.net and relay.snort.social. Wesh uses no other relay.</li>
-<li>Relays see neither your IP address nor the content. For each envelope, they see the recipient's Internet key, time, size and transport metadata. The outer envelope is signed by a one-time ephemeral sender key, so it does not expose the sender's durable protocol identity. This does not rule out traffic correlation by a third party.</li>
+<li>Relays do not see your direct IP address when the connection goes through Tor, or the text of private messages. For each envelope, they see the recipient's Internet key in a readable field (the <code>p</code> tag), type, timestamp, size and transport metadata. The outer envelope is signed by a one-time ephemeral sender key, so it does not expose the sender's durable protocol identity.</li>
+<li>To receive messages, Wesh also sends your own Internet key to the relays in a reception filter (<code>#p</code>), even if you send no text. Private-content encryption does not hide these keys from relays. These identifiers, recipients and the timing of exchanges may allow events or relationships to be linked; the ephemeral envelope key and modified timestamp do not rule out traffic correlation by a third party.</li>
 <li>Anyone who has your QR code knows your Internet key.</li>
 <li>The Tor entry relay sees your IP address, but not which relays you reach or what you send.</li>
-<li>Relays may keep the encrypted messages under their own rules. <strong>These copies cannot be deleted</strong>, not by you, not by Samouraï Coop, not by the emergency erase.</li>
-<li>Samouraï Coop neither controls nor receives this data.</li>
+<li>Relays may keep encrypted messages and readable metadata under their own rules. <strong>Erasing data through Wesh on this phone does not erase copies kept by relays</strong>, whose operators apply their own rules.</li>
+<li>Samouraï Coop does not control these relays. Internet mode does not address a copy of these exchanges to Samouraï Coop; this does not make the metadata invisible to relays.</li>
 <li>On the phone, Wesh keeps your Internet key and Tor's files. The emergency erase deletes them; a new key is created afterwards.</li>
 </ul>
 <!-- INTERNET:END -->
 </main>
 <footer class="site-footer">
 <div class="wrap">
-<p>Wesh is free and open-source software, published on a non-profit basis by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
+<p>Wesh is free and open-source software, published by <a href="https://samourai.world">Samouraï Coop</a>, a French cooperative and open-source engineering studio.</p>
 <nav aria-label="Footer"><ul><li><a href="privacy.html" aria-current="page">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="donate.html">Donate</a></li><li><a href="security.html">Security</a></li><li><a href="legal.html">Legal notice</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">iOS code</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Android code</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">This site sets no cookies, uses no trackers and loads no external resources. © 2026 Samouraï Coop.</p>
 </div>

@@ -33,7 +33,7 @@
 <p>À garder le contact avec les personnes proches quand le réseau mobile ou Internet est coupé : catastrophe naturelle, cyberattaque, panne, coupure. Les téléphones se transmettent les messages par Bluetooth.</p>
 
 <h3>Faut-il créer un compte ?</h3>
-<p>Non. Choisissez un surnom, c'est tout. Vos clés sont créées sur votre téléphone, et Wesh ne les envoie à personne (sauvegardes : voir <a href="confidentialite.html">Confidentialité</a>, §4). Le surnom est visible des personnes à portée et ne prouve pas votre identité.</p>
+<p>Non. Choisissez un surnom, c'est tout. Vos clés sont créées sur votre téléphone. Wesh ne transmet pas les clés privées ; les clés publiques sont communiquées pour permettre les échanges (sauvegardes : voir <a href="confidentialite.html">Confidentialité</a>, §4). Le surnom est visible des personnes à portée et ne prouve pas votre identité.</p>
 
 <h3>Pourquoi Wesh demande-t-il le Bluetooth et l'appareil photo ?</h3>
 <p>Sans Bluetooth, Wesh ne peut pas joindre les téléphones proches. L'appareil photo sert à scanner les QR codes ; aucune image n'est conservée. Sur Android, autorisez les notifications pour être prévenu des nouveaux messages.</p>
@@ -52,11 +52,11 @@
 
 <!-- INTERNET:START -->
 <h3>À quoi sert le mode Internet ?</h3>
-<p>Il est désactivé par défaut. Activé dans <strong>Connexion</strong>, il permet d'écrire à vos contacts vérifiés hors de portée Bluetooth. Les messages passent chiffrés par le réseau Tor, puis par trois relais Nostr publics : relay.damus.io, relay.primal.net et relay.snort.social. Ces relais ne peuvent pas lire les messages. Ils voient à quelle clé un message est destiné, à quelle heure, et sa taille. Le salon local reste uniquement en Bluetooth.</p>
+<p>Il est désactivé par défaut. Activé dans <strong>Connexion</strong>, il permet d'écrire à vos contacts vérifiés hors de portée Bluetooth. Les messages passent chiffrés par le réseau Tor, puis par trois relais Nostr publics : relay.damus.io, relay.primal.net et relay.snort.social. Ces relais ne peuvent pas lire le texte privé. Ils voient la clé du destinataire (tag <code>p</code>), le type, l'horodatage et la taille des enveloppes. Pour recevoir, Wesh leur transmet aussi votre propre clé Internet dans le filtre <code>#p</code>, même sans envoi de texte. Le salon local reste uniquement en Bluetooth. Détails : <a href="confidentialite.html">Confidentialité</a>, §12.</p>
 <!-- INTERNET:END -->
 
 <h3>Comment bloquer ou signaler quelqu'un ?</h3>
-<p>Appuyez sur un message ou un surnom, puis <strong>Bloquer</strong> : vous ne recevrez plus rien de cette personne. <strong>Signaler</strong> bloque la personne et prépare un e-mail vers support@samourai.coop dans votre messagerie. Vous le relisez et choisissez de l'envoyer ou non. Wesh fonctionne sans serveur : nous ne pouvons pas supprimer un message sur les autres téléphones.</p>
+<p>Appuyez sur un message ou un surnom, puis <strong>Bloquer</strong> : les messages de l'identifiant bloqué ne s'affichent plus sur votre téléphone. Ce blocage local n'exclut personne du réseau et ne couvre pas une autre identité. <strong>Signaler</strong> bloque cet identifiant et prépare un e-mail vers support@samourai.coop dans votre messagerie. Vous le relisez et choisissez de l'envoyer ou non. Si vous l'envoyez, le support reçoit ce que vous transmettez. Samouraï Coop n'héberge pas vos conversations et ne peut pas supprimer un message sur les autres téléphones.</p>
 
 <h3>Comment tout effacer en urgence ?</h3>
 <p>Dans <strong>Réglages</strong>, maintenez <strong>Tout effacer</strong> trois secondes. Le raccourci <strong>Tout effacer</strong> (icône de l'app sur Android, Spotlight ou Raccourcis sur iPhone) ouvre la même commande. Il n'efface rien par lui-même.</p>
@@ -83,7 +83,7 @@
 </main>
 <footer class="site-footer">
 <div class="wrap">
-<p>Wesh est un logiciel libre et open source édité sans but lucratif par <a href="https://samourai.world">Samouraï Coop</a>, société coopérative française et studio d'ingénierie open source.</p>
+<p>Wesh est un logiciel libre et gratuit, édité par <a href="https://samourai.world">Samouraï Coop</a>, société coopérative française et studio d'ingénierie open source.</p>
 <nav aria-label="Pied de page"><ul><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="support.html" aria-current="page">Support</a></li><li><a href="transparence.html">Transparence</a></li><li><a href="dons.html">Dons</a></li><li><a href="securite.html">Sécurité</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-ios">Code iOS</a></li><li><a href="https://github.com/samouraiworld/wesh-bitchat-android">Code Android</a></li><li><a href="https://samourai.tv">Samouraï TV</a></li></ul></nav>
 <p class="muted">Ce site ne dépose aucun cookie, n'utilise aucun traceur et ne charge aucune ressource externe. © 2026 Samouraï Coop.</p>
 </div>

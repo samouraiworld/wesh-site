@@ -1,6 +1,6 @@
 # wesh.samourai.app
 
-Static website for Wesh, the free, non-profit, open-source emergency messaging app published by Samouraï Coop. When the mobile network or the Internet is cut off, phones pass messages to each other over Bluetooth.
+Static website for Wesh, the free, open-source emergency messaging app published by Samouraï Coop. When the mobile network or the Internet is cut off, phones pass messages to each other over Bluetooth.
 
 Plain hand-written HTML5 and one stylesheet (`style.css`). No JavaScript, no build step, no cookies, no analytics, no external fonts, scripts or CDNs. Every page carries a Content-Security-Policy that only allows same-origin styles and images, so the site cannot make a third-party request even by mistake. The donate button is a plain link to Tipeee: nothing from Tipeee is embedded.
 
