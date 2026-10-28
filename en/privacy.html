@@ -24,7 +24,7 @@
 </header>
 <main id="contenu" class="wrap" tabindex="-1">
 <h1>Privacy policy</h1>
-<p class="meta">Version 1.6 — last updated 25 October 2026. <a href="../confidentialite.html" hreflang="fr" lang="fr">Version française</a>.</p>
+<p class="meta">Version 1.7 — last updated 28 October 2026. <a href="../confidentialite.html" hreflang="fr" lang="fr">Version française</a>.</p>
 
 <h2>1. Who we are</h2>
 <p>Wesh is a free, open source app published by <strong>SAMOURAI COOP</strong>, a French cooperative limited liability company with variable capital, registered under number 830 485 108 R.C.S. Paris, whose registered office is at 149 avenue du Maine, 75014 Paris, France.<br>Contact: support@samourai.coop. Security issues: security@samourai.coop.</p>
@@ -34,8 +34,11 @@
 <li>No account, no phone number, no email address required.</li>
 <li>Samouraï Coop runs no server for Wesh. Exchanges are not automatically addressed to it. If you choose to email support, it receives what you send (§7).</li>
 <li>Wesh does not read your location.</li>
-<li>No analytics, no crash reporting, no ads, no tracking.</li>
-<li>Over Bluetooth, nearby phones see your nickname and an identifier that does not change until you use the emergency erase (§5).</li>
+<li>Wesh includes no analytics, crash-reporting or advertising tool, and does not itself send any such data. If you allowed it in your phone's settings, Apple or Google may collect system diagnostics, such as crash reports, and pass some of them to Samouraï Coop in their developer tools, under their own rules.</li>
+<li>Over Bluetooth, nearby phones see your nickname and a fixed identifier. It does not change until you use the emergency erase: someone who noted it can recognise your phone when it comes near again (§5).</li>
+<!-- INTERNET:START -->
+<li>Internet mode goes through Tor. Your network operator can see that you use Tor, and some networks block it (§12).</li>
+<!-- INTERNET:END -->
 <li>The local room is public.</li>
 </ul>
 
@@ -52,9 +55,9 @@
 <h2>4. Backups</h2>
 <ul>
 <li><strong>Android:</strong> Wesh excludes all of its data from Google backups and from transfers to a new phone.</li>
-<li><strong>iPhone:</strong> Wesh configures its sensitive files to be excluded from iCloud and computer backups. Keys tied to the device do not migrate to another device. Restoring on the original device may retain keys and still requires qualification. App settings may be backed up (appearance, notices accepted<!-- INTERNET:START -->, whether Internet mode is on<!-- INTERNET:END -->).</li>
+<li><strong>iPhone:</strong> Wesh configures its sensitive files to be excluded from iCloud and computer backups. Keys tied to the device do not migrate to another device. Restoring on the original device may retain these keys. App settings may be backed up (appearance, notices accepted<!-- INTERNET:START -->, whether Internet mode is on<!-- INTERNET:END -->).</li>
 <li>This version no longer counts encountered phones and no longer receives text through the retired share extension. A backup made by an older version may still contain that count, its secret value, encounter times, old geographic-room preferences or unused shared text. A peer ID recorded elsewhere may allow a phone to be recognized in the old count.</li>
-<li>Updating and emergency erase do not modify backups already made. Candidate V1 migration and restoration still require device qualification before publication; a general guarantee that an old backup contains no data has not been established.</li>
+<li>Updating and emergency erase do not modify backups already made: an old backup may still contain Wesh data.</li>
 </ul>
 
 <h2>5. What others see over Bluetooth</h2>
@@ -71,7 +74,7 @@
 <li>These announcements are sent automatically, even if you post nothing in the local room. They are readable by the peers that receive them: signing does not encrypt them. The neighbour list describes proximity and routing links; it is not imported from the phone's address book and does not necessarily represent contacts verified by QR code.</li>
 <li>These announcements are relayed from phone to phone, over at most 7 hops.</li>
 <li>On Android, Wesh may continue running in the background after you open it. <strong>Start after restart</strong> allows startup after the phone restarts, if Android permits it. It defaults to off when no choice was recorded; an existing recorded choice is preserved. This setting does not change the current session.</li>
-<li><strong>Your peer ID and public keys do not change until you use the emergency erase.</strong> A device that records them can recognise your phone from one encounter to the next and see which phones it was linked to.</li>
+<li><strong>Your peer ID and public keys are fixed: they do not change until you use the emergency erase.</strong> A device that records them can recognise your phone every time it comes near and see which phones it was linked to. The Bluetooth address changes made by the system do not prevent this, because the ID is part of the announcements. Only the emergency erase creates a new ID.</li>
 <li>Signal strength lets others estimate how far away your phone is.</li>
 <li><strong>Relaying:</strong> your messages may pass through third-party phones (Wesh or BitChat). Each relaying phone sees the sender's and recipient's IDs, the time and the size of the message. It does not see the content of a private message, which is end-to-end encrypted.</li>
 <li><strong>The local room is public.</strong> Every Wesh and BitChat user in range can read, keep and relay it.</li>
@@ -113,7 +116,7 @@
 <ul>
 <li>You have the GDPR rights of access, rectification, erasure, objection and restriction.</li>
 <li>You manage the data on your phone directly in the app (edit nickname, erase). Exchanges are not automatically addressed to Samouraï Coop; if you choose to email support, it receives what you send (§7).</li>
-<li>Samouraï Coop only holds the emails sent to it (§7). A report may contain another person's nickname, short fingerprint and a public text. To exercise your rights over these emails, including if you were reported: support@samourai.coop.</li>
+<li>Samouraï Coop only holds the emails sent to it (§7) and, where applicable, the diagnostics Apple or Google pass to it (§2). A report may contain another person's nickname, short fingerprint and a public text. To exercise your rights over these emails, including if you were reported: support@samourai.coop.</li>
 <li>To request deletion of data we hold, including information you voluntarily sent to support, email <a href="mailto:support@samourai.coop">support@samourai.coop</a>. You do not need to reinstall Wesh to make this request. We do not control copies kept by other participants or third-party relays; this request cannot guarantee their deletion.</li>
 <li>You may complain to the CNIL (www.cnil.fr) or your local data protection authority.</li>
 </ul>
@@ -133,8 +136,9 @@
 <li>Messages go through the <strong>Tor</strong> network, then through three public <strong>Nostr</strong> relays that Wesh does not run: relay.damus.io, relay.primal.net and relay.snort.social. Wesh uses no other relay.</li>
 <li>Relays do not see your direct IP address when the connection goes through Tor, or the text of private messages. For each envelope, they see the recipient's Internet key in a readable field (the <code>p</code> tag), type, timestamp, size and transport metadata. The outer envelope is signed by a one-time ephemeral sender key, so it does not expose the sender's durable protocol identity.</li>
 <li>To receive messages, Wesh also sends your own Internet key to the relays in a reception filter (<code>#p</code>), even if you send no text. Private-content encryption does not hide these keys from relays. These identifiers, recipients and the timing of exchanges may allow events or relationships to be linked; the ephemeral envelope key and modified timestamp do not rule out traffic correlation by a third party.</li>
-<li>Anyone who has your QR code knows your Internet key.</li>
+<li>Your QR code carries your Internet key, even while Internet mode is off: anyone who has your QR code knows it. A verified contact who turned the mode on may write to you through the relays, which then see your Internet key as the recipient.</li>
 <li>The Tor entry relay sees your IP address, but not which relays you reach or what you send.</li>
+<li><strong>Using Tor is visible.</strong> Your mobile operator, the Wi-Fi network you use or a network observer can see that your phone connects to Tor, without seeing the content or the relays you reach. Some networks and some countries block Tor: Internet mode may then not work. In some settings, using Tor may draw attention.</li>
 <li>Relays may keep encrypted messages and readable metadata under their own rules. <strong>Erasing data through Wesh on this phone does not erase copies kept by relays</strong>, whose operators apply their own rules.</li>
 <li>Samouraï Coop does not control these relays. Internet mode does not address a copy of these exchanges to Samouraï Coop; this does not make the metadata invisible to relays.</li>
 <li>On the phone, Wesh keeps your Internet key and Tor's files. The emergency erase deletes them; a new key is created afterwards.</li>
