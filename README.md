@@ -54,4 +54,4 @@ Every change goes through a pull request; never commit to `main` directly.
 - Never use « anonyme », « intraçable », « sécurisé », "anonymous", "untraceable" or "secure" as a promise.
 - Hi-vis yellow (`--public`) is a fill for "public" only, never a text colour.
 - Keep the site free of third-party requests: no web fonts, no embeds, no scripts.
-- When the apps are published, add the App Store, Google Play and APK links in the "Télécharger" / "Download" section, with the APK SHA-256 and signing-certificate fingerprint.
+- Android is on Google Play; the "Télécharger" / "Download" section links to it. When iOS is approved, replace the "under review" line with the App Store link. If a signed APK is ever distributed outside Play, publish it with its SHA-256 and signing-certificate fingerprint, and add it back to the security scope.
